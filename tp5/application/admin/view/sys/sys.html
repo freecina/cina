@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<title>freecina</title>
+
+<meta name="description" content="Dashboard">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--Basic Styles-->
+<link href="/static/admin/style/bootstrap.css" rel="stylesheet">
+<link href="/static/admin/style/font-awesome.css" rel="stylesheet">
+<link href="/static/admin/style/weather-icons.css" rel="stylesheet">
+
+<!--Beyond styles-->
+<link id="beyond-link" href="/static/admin/style/beyond.css" rel="stylesheet" type="text/css">
+<link href="/static/admin/style/demo.css" rel="stylesheet">
+<link href="/static/admin/style/typicons.css" rel="stylesheet">
+<link href="/static/admin/style/animate.css" rel="stylesheet">
+
+</head>
+<body>
+	<!-- 头部 -->
+	{include file="common/top" /}
+
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+         <!-- Page Sidebar -->
+         {include file="common/left"}
+         <!-- /Page Sidebar -->
+         <!-- Page Content -->
+         <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li class="active">控制面板</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body" style="height: 663px;">
+
+               <div class="result-wrap">
+                <div class="result-title">
+                    <h1>系统基本信息</h1>
+                </div>
+                <div class="result-content" style="font-size: 25px;">
+                    <ul class="sys-info-list">
+                        <li>
+                            <label class="res-lab">操作系统:&nbsp;</label><span class="res-info"><?php echo $_SERVER['HTTP_USER_AGENT'];?></span>
+                        </li>
+                        <li>
+                            <label class="res-lab">运行环境:&nbsp;</label><span class="res-info"><?php echo $_SERVER['SERVER_SOFTWARE'];?></span>
+                        </li>
+                        <li>
+                            <label class="res-lab">PHP运行方式:&nbsp;</label><span class="res-info"><?php echo $_SERVER['SERVER_ADMIN'];?></span>
+                        </li>
+                        <li>
+                            <label class="res-lab">cina设计-版本:&nbsp;</label><span class="res-info">v-0.1</span>
+                        </li>
+                        <li>
+                            <label class="res-lab">上传附件限制:&nbsp;</label><span class="res-info">2M</span>
+                        </li>
+                        <li>
+                            <label class="res-lab">北京时间:&nbsp;</label><span class="res-info"><?php echo date('Y-m-d H:i:s')?></span>
+                        </li>
+                        <li>
+                            <label class="res-lab">服务器域名/IP:&nbsp;</label><span class="res-info"><?php echo $_SERVER['SERVER_NAME'];?></span>
+                        </li>
+                        <li>
+                            <label class="res-lab">Host:&nbsp;</label><span class="res-info"><?php echo $_SERVER['REMOTE_ADDR'];?></span>
+                        </li>
+                        <li>
+                            <label class="res-lab">作者:&nbsp;</label><span class="res-info">freecina</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /Page Body -->
+    </div>
+    <!-- /Page Content -->
+</div>	
+</div>
+<div style="text-align: center;background-color: #ccc;height: 30px; padding-top: 6px;" >
+    Copyright &#169; 2017-2020 freecina：1025932380 版权所有&#160;&#160;&#160;
+    川ICP281314369备</a>&#160;&#160;&#160;
+
+</div>
+
+<!--Basic Scripts-->
+<script src="/static/admin/style/jquery_002.js"></script>
+<script src="/static/admin/style/bootstrap.js"></script>
+<script src="/static/admin/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="/static/admin/style/beyond.js"></script>
+
+
+
+</body>
+</html>

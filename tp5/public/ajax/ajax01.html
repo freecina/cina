@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function doAjax(the_request)
+		{
+			var request = null;
+			try{
+				request = new XMLHttpRequest();
+			}catch(e){
+				try{
+					request = new ActiveXObject('Msxml2.XMLHTTP');
+				}catch(e){
+					try{
+						request = new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					catch(e){
+						alert("你的浏览器不支持ajax");
+						return false;
+					}
+				}
+			}
+			if(request){
+				request.open('GET',the_request,true);
+				request.onreadystatechange = function(){
+					if(request.readyState == 4){
+						if(request.status ==200){
+							document.getElementById('vv').innerHTML = request.responseText;
+						}
+					}
+				};
+				request.send(null);
+			}else{alert('error')};
+		}
+	</script>
+	<input type="button" onclick="doAjax('test.txt')" value="test">
+	<br><br>
+	<div id="vv">cina
+		
+	</div>
+</body>
+</html>

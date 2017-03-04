@@ -1,0 +1,75 @@
+<div id="header_wrap">
+    <div id="header">
+        <div style="float: left; width: 310px;">
+            <h1>
+                <a href="/" title="宽屏大气文章类--41天鹰模板"></a>
+                <div class="" id="logo-sub-class">
+                </div>
+            </h1>
+        </div>
+        <div id="navi">
+
+<ul id="jsddm">
+<li><a class="navi_home" href="{:url('index/index/index')}">首页</a></li>
+<li><a href="{:url('article/artlist')}">地区新闻分类</a>
+<ul>
+{volist name="data" id="vo"}
+
+<li><a href="{:url('article/catenew',array('id'=>$vo.id))}"><?php echo str_repeat('---',$vo['level'])?>{$vo.catename}</a></li>
+
+
+{/volist}
+
+
+</ul>
+
+ </li2><li><a href="{:url('article/imglist')}">热门新闻</a>
+<ul>
+
+<li><a href="#">最新排行</a></li>
+
+
+
+
+</ul>
+
+ </li2><li><a href="{:url('article/imglist')}">列表新闻</a>
+
+
+
+
+
+ </li2><li><a href="{:url('article/page')}">关于我们</a>
+
+
+
+
+
+ </li2>
+
+</ul>
+
+            <div style="clear: both;">
+            </div>
+
+            
+        </div>
+        <div style="float: right; width: 209px;">
+            <div class="widget" style="height: 30px; padding-top: 20px;">
+                <div style="float: left;">
+      <form  name="formsearch" action="/plus/search.php"><input type="hidden" name="kwtype" value="0" />                
+<input name="q" type="text" style="background-color: #000000;padding-left: 10px; font-size: 12px;font-family: 'Microsoft Yahei'; color: #999999;height: 29px; width: 160px; border: solid 1px #666666; line-height: 28px;" id="go" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+        </form>
+                        </div>
+                <div style="float: left;">
+                    <img src="/static/index/images/search-new.png" id="imgSearch" style="cursor: pointer; margin: 0px;
+                        padding: 0px;" onclick="subForm()"  /></div>
+                <div style="clear: both;">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</div>

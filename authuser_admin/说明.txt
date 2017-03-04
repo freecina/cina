@@ -1,0 +1,3 @@
+http://127.0.0.1/think_admin-master/public/index.php/admin/login/index.html    这是后台登录地址
+
+登录名跟密码都是admin    导入数据库即可
