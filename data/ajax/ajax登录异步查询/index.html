@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+author:freeicna;
+time:201700303 
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax_login</title>
+	<script type="text/javascript" src="/static/js/cina.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		div#form{
+			padding-left: 450px;
+			background-color: #ccc;
+
+		}
+		 h1{
+			
+			
+			
+		
+			padding-top:  14px;
+		}
+		div.name{
+			display: inline-block;
+
+		}
+		input#name{
+			display: inline-block;
+			margin-left: 27px;
+
+		}
+		input#pwd{
+			margin-top: 10px;
+			margin-left: 0px;
+			margin-bottom: 20px;
+			
+			
+		}
+	</style>
+</head>
+<body>
+
+	<div id="form">
+	<article><h1>
+	user register:
+</h1></article>
+	
+</article>
+		<form  method="post" >
+		<div>
+			<label>name:</label>
+		<input type="text" name="name" id="name" onblur="login.check()">
+		<div class="name"><p id="pw" style="color: red;"></p></div>
+		</div>
+		
+		<div>
+			<label>password:</label>
+		<input type="text" name="pwd" id="pwd">
+		</div>
+		<button type="button" >register</button>
+	</form>
+	</div>
+	
+	<div style="text-align: center;">
+		<aside><p>后台异步查询数据库检测用户名是否存在</p></aside>
+	</div>
+</body>
+</html>

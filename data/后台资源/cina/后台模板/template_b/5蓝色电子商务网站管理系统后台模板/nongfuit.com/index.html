@@ -1,0 +1,147 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>电子商务网站管理</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+
+    <script language="javascript" src="js/menu.js" type="text/javascript"></script>
+
+</head>
+<body onload="javascript:border_left('left_tab1','left_menu_cnt1');">
+    <form id="form1" runat="server">
+        <table id="indextablebody" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>
+                        <div id="logo" title="用户管理后台">
+                        </div>
+                    </th>
+                    <th>
+                        <a style="color: #16547E">用户 ：admin</a>&nbsp;&nbsp; <a style="color: #16547E">身份 ：超级管理员</a>&nbsp;&nbsp;
+                        <a href="javascript:window.location.reload()" target="content3">隐藏工作台</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="javascript:window.location.reload()" target="content3">管理首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="help" target="_blank">使用帮助</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="menu">
+                        <ul class="bigbtu">
+                            <li id="now01"><a title="安全退出" href="#">安全退出</a></li>
+                            <li id="now02"><a title="更新缓冲" href="#">更新缓冲</a></li>
+                        </ul>
+                    </td>
+                    <td class="tab">
+                        <ul id="tabpage1">
+                            <li id="tab1" title="管理首页"><span id="spanTitle">管理首页</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t1">
+                        <div id="contents">
+                            <table cellpadding="0">
+                                <tr class="t1">
+                                    <td>
+                                        <div class="menu_top">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="t2">
+                                    <td>
+                                        <div id="menu" class="menu">
+                                            <ul class="tabpage2">
+                                                <li id="left_tab1" title="操作菜单" onClick="javascript:border_left('left_tab1','left_menu_cnt1');"><span>人事</span></li>
+                                            </ul>
+                                            <div id="left_menu_cnt1" class="left_menu_cnt">
+                                                <ul id="dleft_tab1">
+                                                    <li id="now11"><a title="系统设置" href="#" target="content3"><span>系统设置1</span></a></li>
+                                                    <li id="now12"><a title="栏目管理" href="#" target="content3"><span>栏目管理</span></a></li>
+                                                    <li id="now13"><a title="下单记录" href="#" target="content3"><span>内容管理</span></a></li>
+                                                    <li id="now17"><a title="上传文件" href="#" target="content3"><span>上传文件管理</span></a></li>
+                                                    <li id="now18"><a title="自定义文件" href="#" target="content3"><span>自定义文件</span></a></li>
+                                                    <li id="now19"><a title="生成文件管理" href="#" target="content3"><span>生成文件管理</span></a></li>
+                                                    <li id="now1a"><a title="标签管理" href="#" target="content3"><span>标签管理</span></a></li>
+                                                    <li id="now1b"><a title="模板管理" onclick="show_title('生成文件管理')" href="#" target="content3">
+                                                        <span>模板管理</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                            
+                                            <ul class="tabpage2">
+                                                <li id="left_tab2" onClick="javascript:border_left('left_tab2','left_menu_cnt2');" title="操作菜单"><span>日程</span></li>
+                                            </ul>
+                                            <div id="left_menu_cnt2" class="left_menu_cnt">
+                                                <ul id="dleft_tab2">
+                                                    <li id="now11"><a title="系统设置" href="#" target="content3"><span>系统设置2</span></a></li>
+                                                    <li id="now12"><a title="栏目管理" href="#" target="content3"><span>栏目管理</span></a></li>
+                                                    <li id="now13"><a title="下单记录" href="#" target="content3"><span>内容管理</span></a></li>
+                                                    <li id="now14"><a title="友情链接管理" href="#" target="content3"><span>友情链接管理</span></a></li>
+                                                    <li id="now15"><a title="自定义标签" href="#" target="content3"><span>自定义标签</span></a></li>
+                                                    <li id="now16"><a title="管理员管理" href="#" target="content3"><span>管理员管理</span></a></li>
+                                                    <li id="now17"><a title="上传文件" href="#" target="content3"><span>上传文件管理</span></a></li>
+                                                    <li id="now18"><a title="自定义文件" href="#" target="content3"><span>自定义文件</span></a></li>
+                                                    <li id="now19"><a title="生成文件管理" href="#" target="content3"><span>生成文件管理</span></a></li>
+                                                    <li id="now1a"><a title="标签管理" href="#" target="content3"><span>标签管理</span></a></li>
+                                                    <li id="now1b"><a title="模板管理" onclick="show_title('生成文件管理')" href="#" target="content3">
+                                                        <span>模板管理</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                            
+                                            <ul class="tabpage2">
+                                                <li id="left_tab3" onClick="javascript:border_left('left_tab3','left_menu_cnt3');" title="操作菜单"><span>财务</span></li>
+                                            </ul>
+                                            <div id="left_menu_cnt3" class="left_menu_cnt">
+                                                <ul id="dleft_tab3">
+                                                    <li id="now11"><a title="系统设置" href="#" target="content3"><span>系统设置2</span></a></li>
+                                                    <li id="now11"><a title="栏目管理" href="#" target="content3"><span>栏目管理</span></a></li>
+                                                    <li id="now11"><a title="下单记录" href="#" target="content3"><span>内容管理</span></a></li>
+                                                    <li id="now11"><a title="友情链接管理" href="#" target="content3"><span>友情链接管理</span></a></li>
+                                                    <li id="now11"><a title="自定义标签" href="#" target="content3"><span>自定义标签</span></a></li>
+                                                    <li id="now11"><a title="管理员管理" href="#" target="content3"><span>管理员管理</span></a></li>
+                                                    <li id="now11"><a title="上传文件" href="#" target="content3"><span>上传文件管理</span></a></li>
+                                                    <li id="now11"><a title="自定义文件" href="#" target="content3"><span>自定义文件</span></a></li>
+                                                    <li id="now11"><a title="生成文件管理" href="#" target="content3"><span>生成文件管理</span></a></li>
+                                                    <li id="now11"><a title="标签管理" href="#" target="content3"><span>标签管理</span></a></li>
+                                                    <li id="now11"><a title="模板管理" onclick="show_title('生成文件管理')" href="#" target="content3">
+                                                        <span>模板管理</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </div>
+                                        <tr class="t3">
+                                            <td>
+                                                <div class="menu_end">
+                                                </div>
+                                            </td>
+                                        </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td class="t2">
+                        <div id="cnt">
+                            <div id="dtab1">
+                                <iframe name="content3" src="main.html" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+        //修改标题
+        function show_title(str){
+	        document.getElementById("spanTitle").innerHTML=str;
+        }
+        </script>
+    </form>
+</body>
+</html>
