@@ -1,0 +1,100 @@
+<!DOCTYPE html>  
+<!-- 
+time: 2017-3-12
+author:cina
+title:baidumap
+-->
+<html>  
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>baidu_map_test</title>  
+<style type="text/css">  
+html{height:100%}  
+body{height:100%;margin:0px;padding:0px}  
+#container{height:80%;}  
+</style>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=I8FBmkWgwcT9xGGDckLpMb5pnxgVGwEF">
+//v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+//v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+</script>
+</head>  
+ 
+<body>  
+<div id="container"></div> 
+<div id="r-result"></div>
+<script type="text/javascript"> 
+var map = new BMap.Map("container");  
+        // 创建地图实例  
+var point = new BMap.Point(104.104, 30.6945);  // 创建点坐标  
+map.centerAndZoom(point, 10);  
+map.addControl(new BMap.NavigationControl());    
+map.addControl(new BMap.ScaleControl());    
+map.addControl(new BMap.OverviewMapControl());    
+map.addControl(new BMap.MapTypeControl());  
+map.addControl(new BMap.GeolocationControl());  
+map.setCurrentCity("成都市");   
+
+var geolocation = new BMap.Geolocation();    //浏览器定位
+geolocation.getCurrentPosition(function(r){
+	if(this.getStatus() == BMAP_STATUS_SUCCESS){
+		//var mk = new BMap.Marker(r.point);
+		//map.addOverlay(mk);
+		map.panTo(r.point);
+		//alert('您的位置:'+r.point.lng+','+r.point.lat);
+	}else{
+		alert('failed'+this.getStatus);
+	}
+})
+
+//地址解析
+
+// var myGeo = new BMap.Geocoder();
+// myGeo.getPoint("猪八戒",function(point){
+// 	if(point){
+// 		map.centerAndZoom(point,15);
+// 		map.addOverlay(new BMap.Marker(point));
+// 	}else{
+// 		alert('地址不存在');
+// 	}
+// },"成都市");
+
+//逆地址解析 点出获取地址
+// var geoc = new BMap.Geocoder();
+// map.addEventListener("click",function(e){
+// 	var pt = e.point;//点出的位置坐标点
+// 	geoc.getLocation(pt,function(rs){
+// 		var addComp = rs.addressComponents;
+// 		alert(addComp.province+','+addComp.city+','+addComp.district+','+addComp.street+','+addComp.streetNumber);
+// 	});
+// });
+
+//步行规划
+// var walking = new BMap.WalkingRoute(map,{renderOptions:{map:map,autoViewport:true}});
+// walking.search('温江公园','双流西站');
+
+//获取步行导航
+// var walking = new BMap.WalkingRoute(map, {renderOptions:{map:map,panel:"r-result",autoViewport:true}});
+// walking.search('温江公园','火车东站');
+
+//驾车规划
+// var driving = new BMap.DrivingRoute(map,{renderOptions:{map:map,panel:"r-result",autoViewport:true}});
+// driving.search('中医大省医院','火车东站');
+
+//公交检索
+// var transit = new BMap.TransitRoute(map, {renderOptions:{map:map,panel:"r-result"}});
+// transit.search("温江公园","火车东站");
+
+//信息检索
+// var local = new BMap.LocalSearch(map, {renderOptions:{map:map, panel:"r-result"}});
+// local.search('厕所');
+
+
+//点出获取经纬度
+map.addEventListener("click", function(e){    
+ alert(e.point.lng + ", " + e.point.lat);    
+});
+           
+</script>  
+</body>  
+</html>
